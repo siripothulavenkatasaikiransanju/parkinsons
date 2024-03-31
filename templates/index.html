@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parkinson's Diseases Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <img src="{{ url_for('static', filename='park.png') }}" class="logo">
+            <h1>Parkinson's Disease Prediction</h1>
+            <img src="{{ url_for('static', filename='Picture5.jpg') }}" class="logo-right">
+        </div>
+        
+        <!--<div class="flex-form">-->
+            <form action="/predict" method="POST">
+                <div class="input-row">
+                    <input type="float" name="mdvp_fo" id="mdvp_fo" placeholder="MDVP:Fo(Hz)">
+                    <input type="float" name="mdvp_fhi" id="mdvp_fhi" placeholder="MDVP:Fhi(Hz)">
+                    <input type="float" name="mdvp_flo" id="mdvp_flo" placeholder="MDVP:Flo(Hz)">
+                    <input type="float" name="mdvp_jitper" id="mdvp_jitper" placeholder="MDVP:Jitter(%)">
+                </div>
+                <div class="input-row">
+                    <input type="float" name="mdvp_jitabs" id="mdvp_jitabs" placeholder="MDVP:Jitter(Abs)">
+                    <input type="float" name="mdvp_rap" id="mdvp_rap" placeholder="MDVP:RAP">
+                    <input type="float" name="mdvp_ppq" id="mdvp_ppq" placeholder="MDVP:PPQ">
+                    <input type="float" name="jitter_ddp" id="jitter_ddp" placeholder="Jitter:DDP">
+                </div>
+                <div class="input-row">
+                    <input type="float" name="mdvp_shim" id="mdvp_shim" placeholder="MDVP:Shimmer">
+                    <input type="float" name="mdvp_shim_db" id="mdvp_shim_db" placeholder="MDVP:Shimmer(dB)">
+                    <input type="float" name="shimm_apq3" id="shimm_apq3" placeholder="Shimmer:APQ3 range">
+                    <input type="float" name="shimm_apq5" id="shimm_apq5" placeholder="Shimmer:APQ5 range">
+                </div>
+                <div class="input-row">
+                    <input type="float" name="mdvp_apq" id="mdvp_apq" placeholder="MDVP:APQ range">
+                    <input type="float" name="shimm_dda" id="shimm_dda" placeholder="Shimmer:DDA range">
+                    <input type="float" name="nhr" id="nhr" placeholder="NHR range">
+                    <input type="float" name="hnr" id="hnr" placeholder="HNR range">
+                </div>
+                <div class="input-row">
+                    <input type="float" name="rpde" id="rpde" placeholder="RPDE range">
+                    <input type="float" name="dfa" id="dfa" placeholder="DFA range">
+                    <input type="float" name="spread1" id="spread1" placeholder="Spread1 range">
+                    <input type="float" name="spread2" id="spread2" placeholder="Spread2 range">
+                </div>
+                <div class ="input-column">
+                    <input type="float" name="d2" id="d2" placeholder="D2 range">
+                    <input type="float" name="ppe" id="ppe" placeholder="PPE range">
+                </div>
+                
+                <button type="submit" value="Predict">Predict</button>
+            </form>
+        <!--</div>-->
+    </div>
+</body>
+</html>
